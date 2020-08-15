@@ -3,13 +3,13 @@
 body {
   background-color: #100e17;
   font-family: 'Poppins', sans-serif;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  /* overflow-y: hidden; */
+  /* overflow-x: hidden; */
 }
 
 .container {
   position: absolute;
-  height: 300px;
+  height: 100%;
   width: 60%;
   top: 50%;
   left: 60%;
@@ -28,7 +28,34 @@ body {
 /*   margin-left: -50px; */
   transition: 0.4s ease-out;
   position: relative;
-  left: 0;
+  left: 0%;
+}
+
+@media(max-width: 900px){
+  .container{
+    display: inline-block;
+  }
+  .card{
+    /* position: relative; */
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+
+  .card:not(:first-child) {
+      margin-top: -180px;
+  }
+
+  .card:hover {
+    transform: translateY(-50px);
+    transition: 0.4s ease-out;
+  }
+
+  .card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
 }
 
 .card:not(:first-child) {
@@ -61,6 +88,7 @@ body {
   height: 5px;
   width: 80%;
   text-align: center;
+  /* margin-right: 20px; */
 }
 
 .emptybar {
@@ -81,7 +109,7 @@ body {
 }
 
 .card:hover .filledbar {
-  width: 120px;
+  width: 80%;
   transition: 0.4s ease-out;
 }
 
@@ -140,6 +168,10 @@ svg {
   font-weight: bolder;
   position: absolute;
   left: -20%;
+  align-items: center;
+  top: 50%;
+  transform: translate(-50%, -50%)
+   /* transform: skewY(10deg) */
   /* position: absolute; */
   /*font-size: 3.5rem;
   top: -40%;
@@ -152,3 +184,4 @@ svg {
   top: 16%;
   left: 8%;
 }
+
