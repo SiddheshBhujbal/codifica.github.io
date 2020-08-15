@@ -3,7 +3,7 @@
 body {
   background-color: #100e17;
   font-family: 'Poppins', sans-serif;
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 
@@ -32,32 +32,34 @@ body {
 }
 
 @media(max-width: 900px){
+  body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
   .container{
     display: inline-block;
   }
+  
   .card{
     /* position: relative; */
-    top: 40%;
+    top: 10%;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
   }
 
-  .card:not(:first-child) {
-      margin-top: -180px;
+  .card:not {
+      margin-top: -250px;
   }
 
   .card:hover {
-    transform: translateY(-50px);
-    transition: 0.4s ease-out;
+    transform: translateX(-150px);
+    transition: 0.4s ease-in;
   }
 
-  .card:hover ~ .card {
-    position: relative;
-    left: 50px;
-    transition: 0.4s ease-out;
-  }
 }
 
+@media(min-width: 900px){
 .card:not(:first-child) {
     margin-left: -50px;
 }
@@ -71,6 +73,35 @@ body {
   position: relative;
   left: 50px;
   transition: 0.4s ease-out;
+}
+}
+
+@media(max-width: 400px){
+  body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+    .container{
+    display: inline-block;
+  }
+
+  .card{
+    /* position: relative; */
+    top: 10%;
+    left: 70%;
+    transform: translateX(-50%);
+  }
+
+  .card:not {
+      margin-top: -250px;
+  }
+
+  .card:hover {
+    transform: translateX(-150px);
+    transition: 0.4s ease-in;
+  }
+
 }
 
 .title {
