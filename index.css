@@ -30,6 +30,7 @@ body {
   position: relative;
   left: 0%;
   margin-bottom: 25px;
+  border: 1px solid #fff;
 }
 
 @media (max-width: 900px) {
