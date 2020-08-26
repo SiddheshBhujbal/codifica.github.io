@@ -101,7 +101,7 @@ body {
   .card {
     /* position: relative; */
     top: 10%;
-    left: 110%;
+    left: 100%;
     transform: translateX(-50%);
     border: 1px solid #fff;
   }
