@@ -356,7 +356,7 @@ button.learn-more .button-text a {
   position: absolute;
   top: 50%;
   left: calc(120px - 20px);
-  border: 8px solid #323234;
+  border: 8px solid #fff;
   border-top: 0;
   width: 40px;
   height: 20px;
@@ -371,7 +371,7 @@ button.learn-more .button-text a {
   position: absolute;
   top: 50%;
   left: calc(120px - 38px);
-  border: 8px solid #323234;
+  border: 8px solid #fff;
   border-top: 0;
   width: 76px;
   height: 38px;
@@ -387,7 +387,7 @@ button.learn-more .button-text a {
   position: absolute;
   top: 50%;
   left: calc(120px - 56px);
-  border: 8px solid #323234;
+  border: 8px solid #fff;
   border-top: 0;
   width: 112px;
   height: 56px;
@@ -403,7 +403,7 @@ button.learn-more .button-text a {
   position: absolute;
   top: 50%;
   left: calc(120px - 74px);
-  border: 8px solid #323234;
+  border: 8px solid #fff;
   border-top: 0;
   width: 148px;
   height: 74px;
@@ -419,7 +419,7 @@ button.learn-more .button-text a {
   position: absolute;
   top: 50%;
   left: calc(120px - 92px);
-  border: 8px solid #323234;
+  border: 8px solid #fff;
   border-top: 0;
   width: 184px;
   height: 92px;
