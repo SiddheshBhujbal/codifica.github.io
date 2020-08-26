@@ -1,9 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #100e17;
   font-family: "Poppins", sans-serif;
-  overflow-y: hidden;
+  overflow-y: scroll;
   overflow-x: hidden;
 }
 
@@ -25,12 +35,11 @@ body {
   background-color: rgb(23, 20, 29, 0.8);
   border-radius: 10px;
   box-shadow: -1rem 0 3rem #000;
-  /*   margin-left: -50px; */
+  margin-left: -45px;
   transition: 0.4s ease-out;
   position: relative;
   left: 0%;
   margin-bottom: 25px;
-  border: 1px solid #fff;
 }
 
 @media (max-width: 900px) {
@@ -45,8 +54,9 @@ body {
 
   .card {
     /* position: relative; */
+    margin-top: 40px;
     top: 10%;
-    left: 50%;
+    left: 60%;
     transform: translateX(-50%);
   }
 
@@ -61,16 +71,17 @@ body {
 }
 
 @media (min-width: 900px) {
-  .card:not(:first-child) {
+  .container .card:not(:first-child) {
     margin-left: -50px;
   }
 
   .card:hover {
     transform: translateY(-20px);
+    /* transform: translateX(-50px); */
     transition: 0.4s ease-out;
   }
 
-  .card:hover ~ .card {
+  .container .card:hover ~ .card {
     position: relative;
     left: 50px;
     transition: 0.4s ease-out;
@@ -90,8 +101,9 @@ body {
   .card {
     /* position: relative; */
     top: 10%;
-    left: 70%;
+    left: 90%;
     transform: translateX(-50%);
+    border: 1px solid #fff;
   }
 
   .card:not {
@@ -145,7 +157,7 @@ body {
 }
 
 .card:hover .filledbar {
-  width: 80%;
+  width: 100%;
   transition: 0.4s ease-out;
 }
 
@@ -157,8 +169,8 @@ body {
 
 .stroke {
   stroke: white;
-  stroke-dasharray: 360;
-  stroke-dashoffset: 360;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
   transition: 0.6s ease-out;
 }
 
@@ -243,7 +255,7 @@ button.learn-more {
   width: 10rem;
   height: 3rem;
 }
-.card button.learn-more:hover{
+.card button.learn-more:hover {
   width: 10rem;
   height: auto;
   margin-left: auto;
@@ -289,7 +301,7 @@ button.learn-more .circle .icon.arrow::before {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-button.learn-more .button-text a{
+button.learn-more .button-text a {
   -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
@@ -308,19 +320,121 @@ button.learn-more .button-text a{
 .card:hover button .circle {
   width: 100%;
 }
-.card:hover button .circle .icon.arrow {
+/* .card:hover button .circle .icon.arrow {
   background: #fff;
   -webkit-transform: translate(1rem, 0);
   transform: translate(1rem, 0);
-}
-.card:hover button .button-text a{
+} */
+.card:hover button .button-text a {
   color: #fff;
   text-decoration: transparent;
 }
 
-  #container {
-    grid-area: main;
-    align-self: center;
-    justify-self: center;
+#container {
+  grid-area: main;
+  align-self: center;
+  justify-self: center;
+}
+
+/* Loading animation */
+.loader {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #100e17;
+  margin: 0;
+  padding: 0;
+}
+#loader-container {
+  width: 240px;
+  height: 240px;
+  position: relative;
+}
+#sc1 {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: calc(120px - 20px);
+  border: 8px solid #323234;
+  border-top: 0;
+  width: 40px;
+  height: 20px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  animation: rotate 1200ms ease-in-out infinite;
+  transform-origin: top center;
+}
+
+#sc2 {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: calc(120px - 38px);
+  border: 8px solid #323234;
+  border-top: 0;
+  width: 76px;
+  height: 38px;
+  border-bottom-left-radius: 76px;
+  border-bottom-right-radius: 76px;
+  animation: rotate 1200ms ease-in-out infinite;
+  transform-origin: top center;
+  animation-delay: -200ms;
+}
+
+#sc3 {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: calc(120px - 56px);
+  border: 8px solid #323234;
+  border-top: 0;
+  width: 112px;
+  height: 56px;
+  border-bottom-left-radius: 112px;
+  border-bottom-right-radius: 112px;
+  animation: rotate 1200ms ease-in-out infinite;
+  transform-origin: top center;
+  animation-delay: -400ms;
+}
+
+#sc4 {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: calc(120px - 74px);
+  border: 8px solid #323234;
+  border-top: 0;
+  width: 148px;
+  height: 74px;
+  border-bottom-left-radius: 148px;
+  border-bottom-right-radius: 148px;
+  animation: rotate 1200ms ease-in-out infinite;
+  transform-origin: top center;
+  animation-delay: -600ms;
+}
+
+#sc5 {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: calc(120px - 92px);
+  border: 8px solid #323234;
+  border-top: 0;
+  width: 184px;
+  height: 92px;
+  border-bottom-left-radius: 184px;
+  border-bottom-right-radius: 184px;
+  animation: rotate 1200ms ease-in-out infinite;
+  transform-origin: top center;
+  animation-delay: -700ms;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
