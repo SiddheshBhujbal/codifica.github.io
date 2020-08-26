@@ -101,7 +101,7 @@ body {
   .card {
     /* position: relative; */
     top: 10%;
-    left: 90%;
+    left: 110%;
     transform: translateX(-50%);
     border: 1px solid #fff;
   }
@@ -113,6 +113,10 @@ body {
   .card:hover {
     transform: translateX(-150px);
     transition: 0.4s ease-in;
+  }
+
+  .card:nth-of-type(5) {
+    margin-bottom: 200px;
   }
 }
 
