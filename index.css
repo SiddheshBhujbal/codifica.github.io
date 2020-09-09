@@ -13,7 +13,7 @@ html {
 body {
   background-color: #100e17;
   font-family: "Poppins", sans-serif;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 
@@ -195,6 +195,7 @@ svg {
   top: -20%;
   left: -20%;
   z-index: -1;
+  /* position: fixed; */
 }
 
 #Layer_1 path {
@@ -229,6 +230,7 @@ svg {
   top: -40%;
   left: 50%;
   transform: translate(-50%,-50%); */
+  /* position: fixed; */
 }
 
 .event_logo {

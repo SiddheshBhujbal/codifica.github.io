@@ -10,8 +10,7 @@
     <link rel="stylesheet" type="text/css" href="index.css" />
     <link href="aos.css" rel="stylesheet" />
     <script src="aos.js"></script>
-    <script src='jquery-3.4.1.min.js'></script>
-
+    <script src="jquery-3.4.1.min.js"></script>
   </head>
   <body>
     <svg
@@ -292,9 +291,7 @@
         data-aos-offset="0"
         data-aos="zoom-out-left"
       >
-        <div
-          class="card"
-        >
+        <div class="card">
           <h3 class="title">Code Junkie ++</h3>
           <div class="bar">
             <div class="emptybar"></div>
@@ -347,28 +344,29 @@
               </span>
             </button>
           </div>
-          </div>
         </div>
       </div>
     </div>
+
     <div class="loader">
-    <div id="loader-container">
-      <div id="sc1"></div>
-      <div id="sc2"></div>
-      <div id="sc3"></div>
-      <div id="sc4"></div>
-      <div id="sc5"></div>
+      <div id="loader-container">
+        <div id="sc1"></div>
+        <div id="sc2"></div>
+        <div id="sc3"></div>
+        <div id="sc4"></div>
+        <div id="sc5"></div>
+      </div>
     </div>
-  </div>
+
+    <div style="height: 200px; position: relative; bottom: -300%"></div>
+
     <script>
       AOS.init();
     </script>
     <script>
-      console.log('outside')
-      $(window).on("load", function() {
-        console.log("Inside")
-        $('.loader').fadeOut('slow');
-      })
+      $(window).on("load", function () {
+        $(".loader").fadeOut("slow");
+      });
     </script>
   </body>
 </html>
