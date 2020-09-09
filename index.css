@@ -193,7 +193,7 @@ svg {
   height: 150%;
   width: 150%;
   top: -20%;
-  left: -20%;
+  left: -25%;
   z-index: -1;
   /* position: fixed; */
 }
@@ -442,5 +442,12 @@ button.learn-more .button-text a {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1140px) and (min-width: 900px){
+  .container{
+    position: absolute;
+    left: 48%;
   }
 }
