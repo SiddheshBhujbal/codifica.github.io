@@ -154,7 +154,7 @@ body {
 
   .container {
     display: inline-block;
-    left: 60%;
+    left: 50%;
   }
 
   .card {
@@ -170,7 +170,7 @@ body {
   }
 
   .card:hover {
-    transform: translateZ(-10px);
+    transform: translateX(-110px);
     transition: 0.4s ease-in;
   }
 
