@@ -174,10 +174,6 @@ body {
     transition: 0.4s ease-in;
   }
 
-  .card:nth-of-type(5) {
-    margin-bottom: 200px;
-  }
-
   #Layer_1{
     left: -15%;
   }
